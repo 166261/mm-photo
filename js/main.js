@@ -361,7 +361,7 @@
     /* === 全屏预览 === */
     function filtered(){return filter==="all"?photos:photos.filter(function(p){return p.category===filter})}
     function openViewer(idx){
-        vIdx=0;var f=filtered();if(!f.length)return;
+        vIdx=idx||0;var f=filtered();if(!f.length)return;
         document.getElementById("viewer").classList.add("open");
         document.body.style.overflow="hidden";
         updateViewer();
