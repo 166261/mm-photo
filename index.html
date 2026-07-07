@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《Mm的专属美照库》</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 导航 -->
+<nav class="nav" id="nav">
+    <a href="#hero" class="nav-brand">
+        <span class="brand-icon">◐</span>
+        <span class="brand-name">Mm的专属美照库</span>
+    </a>
+    <div class="nav-menu">
+        <a href="#gallery" class="nav-link">画廊</a>
+        <a href="#upload" class="nav-link">上传</a>
+        <a href="#manage" class="nav-link">整理</a>
+    </div>
+    <div class="nav-dock">
+        <a href="#upload" class="dock-btn">+ 上传</a>
+    </div>
+</nav>
+
+<!-- 首页大图 -->
+<header class="hero" id="hero">
+    <div class="hero-slide" id="heroSlide"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+        <div class="hero-cate">— 摄影集 —</div>
+        <h1 class="hero-title" id="heroTitle">记录<span class="title-em">她</span>最美的瞬间</h1>
+        <p class="hero-sub" id="heroSub"></p>
+        <a href="#gallery" class="hero-go">
+            <span class="go-arr">→</span>
+            <span class="go-txt">进入画廊</span>
+        </a>
+    </div>
+    <div class="hero-progress"><div class="hero-bar" id="heroBar"></div></div>
+</header>
+
+<!-- 情话跑带 -->
+<section class="runway" id="runway">
+    <div class="runway-track">
+        <div class="runway-items" id="runwayItems"></div>
+    </div>
+</section>
+
+<!-- 画廊 -->
+<section class="gallery" id="gallery">
+    <div class="sec-h">
+        <h2 class="sec-title">作品画廊</h2>
+        <p class="sec-sub">每一张都值得被珍藏</p>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+</section>
+
+<!-- 上传 -->
+<section class="upload" id="upload">
+    <div class="sec-h">
+        <h2 class="sec-title">添加照片</h2>
+        <p class="sec-sub">无损原图保存，拒绝压缩</p>
+    </div>
+    <div class="upload-zone" id="uploadZone">
+        <div class="uz-visual">
+            <div class="uz-icon-box">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 6v20M6 16h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+            </div>
+        </div>
+        <h3 class="uz-title">拖拽照片到这里</h3>
+        <p class="uz-desc">或点击按钮选择 · 支持 JPG / PNG / HEIC / WebP</p>
+        <button class="btn-main" id="btnPick">选择文件</button>
+        <p class="uz-promise">原图画质 · 永不上传服务器 · 仅本地保存</p>
+        <input type="file" id="fileInput" multiple accept="image/*" hidden>
+    </div>
+    <div class="upload-result" id="uploadResult"></div>
+</section>
+
+<!-- 卡片信息编辑区 -->
+<section class="edit-panel" id="editPanel">
+    <div class="sec-h">
+        <h2 class="sec-title">照片详情</h2>
+        <p class="sec-sub" id="editHint">点击任意照片开始编辑</p>
+    </div>
+    <div class="edit-card" id="editCard"></div>
+</section>
+
+<!-- 整理 -->
+<section class="manage" id="manage">
+    <div class="sec-h">
+        <h2 class="sec-title">管理相册</h2>
+        <p class="sec-sub">一次性浏览和整理所有照片</p>
+    </div>
+    <div class="manage-grid" id="manageGrid"></div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <p class="footer-quote" id="footerQuote"></p>
+    <p class="footer-sign">— Mm的专属美照库 · 永远爱她 —</p>
+</footer>
+
+<!-- 全屏预览 -->
+<div class="viewer" id="viewer">
+    <div class="v-bg"></div>
+    <button class="v-close" id="vClose">×</button>
+    <button class="v-prev" id="vPrev">‹</button>
+    <button class="v-next" id="vNext">›</button>
+    <div class="v-img"><img id="vImg" src="" alt=""></div>
+    <div class="v-info">
+        <div class="v-title" id="vTitle"></div>
+        <div class="v-loc" id="vLoc"></div>
+        <div class="v-date" id="vDate"></div>
+        <div class="v-note" id="vNote"></div>
+        <div class="v-mood" id="vMood"></div>
+    </div>
+    <div class="v-count" id="vCount"></div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
